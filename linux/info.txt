@@ -1,0 +1,21 @@
+hostname
+whoami
+pwd
+uname
+uptime
+which
+date   
+cal	// cal 12 2001
+bc // just normal calculator
+
+
+// system moniteur
+
+top
+df
+dmesg
+iostat 1
+netstat
+free
+cat /proc/cpuinfo
+cat /proc/meminfo

@@ -1,0 +1,149 @@
+watch command // run command periodicly
+/usr/share/wordlists
+
+
+touch file {1..4}
+rm file[1-4]
+
+!n // after get the line of the command $(history | tail ) replace n with the line
+cat `!!`  
+cat !$
+!i
+
+ls > output.log 2>&1   // *  & we use it for bash to know it is a stdout not a file named 1
+du -sh /home/* | sort -hr     //*
+
+
+sudo ecryptfs-migrate-home -u [username] (example: sudo ecryptfs-migrate-home -u drew)
+////////////////////////////////
+upower
+man hier
+mount 
+ln -s // soft link // hard link ln
+
+///////////////////////////////////////
+cd 'ji j'  / cd jj\ ife    // space
+less
+more
+tial -f /var/log/auth.log
+head
+grep -v
+find . -name file
+find . -iname file
+locate file // search in data base
+updatedb  // to refrech or update the data base for locate
+updatedb: can not open a temporary file for `/var/lib/mlocate/mlocate.db'
+///////////////////////////////////////
+man
+info
+hostname
+whoami
+who
+w 
+users
+which  // fine the binary file
+whereis // find the binary file and its man
+where  // fine the binary file
+uname
+///////////////////////////////////////Storage
+df -h
+du -sh file
+
+du -sh /home/* | sort -hr                           
+13G     /home/kali
+
+
+du -sh /home/kali/* | sort -hr
+13G     /home/kali/zero.txt
+134M    /home/kali/Documents
+80K     /home/kali/Desktop
+4.0K    /home/kali/Videos
+4.0K    /home/kali/Templates
+4.0K    /home/kali/Public
+4.0K    /home/kali/Pictures
+4.0K    /home/kali/Music
+4.0K    /home/kali/Downloads
+
+///////////////////////////////////////
+eject
+unmount
+lsdlk
+///////////////////////////////////////
+tmux
+tmux a
+tmux ls
+tmux a -t id
+tmux new-session -s id
+tmux kill-session -t id
+tmux kill-server
+c b d
+c b %
+c b "
+c b c
+c b s
+c b n
+c b q
+c b alt int
+///////////////////////////////////////
+zip 
+unzip
+unzip filename.zip -d /path/to/destination_directory
+gunzip -c filename.gz > /path/to/destination_directory/output_file
+gzip
+tar -xvf directory.tar -C /path/to/destination_directory 
+///////////////////////////////////////
+sudo apt install 7zip-full
+7z x file.rar
+7z a ex.rar|7z  eijf ejfijf ifje 
+///////////////////////////////////////
+sshd  serer ssh
+
+
+///////////////////////////////////////
+lsblk  // all storage list
+lsusb
+lspci
+hwinfo
+htop  // dtop
+cat /proc/mounts == mount
+////////////
+sudo apt-get install ifejzf
+dpkg -i efij.deb
+
+/////////////////////////////////////// RAM
+free -m
+htop
+sysctl vm.swappiness  // /etc/sysctl.conf
+///////////////////////////////////////BASH
+printenv
+~/.bashrc
+alias d='rm -rfi'
+alias c='clear'
+source .bashrc
+
+////////////////////////////FDISK
+lsblk
+sudo fdisk /dev/sdX
+
+Common fdisk Commands:
+Once inside fdisk, you can use various commands to manipulate the disk partitions. Some of the most common commands are:
+
+g: empty the current partition table
+m: Print the help menu, listing all available commands.
+p: Print the current partition table.
+n: Create a new partition.
+d: Delete an existing partition.
+t: Change a partition's type.
+a: Toggle a bootable flag.
+w: Write the changes to the disk and exit.
+q: Quit without saving changes.
+//////////////////////////////nl
+nl -ba -dv 5 -s // snort.lua  // a count all line b for style and v for spce between number ane line s for seperator
+/////////////////////////////// tail | head
+tail -n+9 snort.lua| head -n 6    
+head -n 14 snort.lua|tail -n6
+
+
+////////////////ip
+ip addr
+///////////////ss

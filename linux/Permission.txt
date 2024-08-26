@@ -1,0 +1,100 @@
+tty
+dmidecode
+echo $WAYLAND_DISPLAY
+watch
+ss -tan
+netstat -ltpn
+~
+ls -l /dev/pts
+see the pts/n
+ls -l /dev
+see the ttyn
+/////////////////////////////////////// sudoers
+sudo vim /etc/sudoers
+%wheel All=(All) All
+%kali-trusted   ALL=(ALL:ALL) NOPASSWD: ALL
+Defaults !tty_tickets // prevent give many time root passwd
+
+sudo useradd -m -G wheel -s /bin/bash emma
+useradd
+usermod 
+userdel
+groupadd
+groupmod
+groupdel
+addgroup/adduser
+chage
+su -username
+sudo
+who
+last
+w
+whoami
+id
+finger/pinky
+users
+wall
+write
+
+
+sudo tail -f /var/log/auth.log
+watch tail /var/log/auth.log
+grep sudo /var/log/secure // sentOS
+
+useradd -g group_name -s /bin/bash -c "description  dd" -m -d /home/userHome user_name
+usermod -G group_name user_name
+usermod -aG group_name user_name
+userdel -r username  // delete the home directory with the user
+
+chage -m[mindays] -M[maxdays] -d[lastday] -I[inactive] -E[expiredate] -W[warndays] user_name
+chage -m 5 -M 15 -W 4 -I 3 ironman 
+
+groupadd
+groupdel
+
+
+acountname:x:acc_id:group_id:group:usrname,ef,fe,ef:/home/acountname:/bin/bash
+groupname:x:grup_id:user1,user2
+
+cat /etc/passwd | grep -vE "nologin|false|sync"
+cat /etc/group
+cat /etc/shadow
+cat /etc/sudoers
+cat /etc/login.def
+
+
+
+
+///////////////////////////////////////
+sudoers 
+% for groups
+no % for user
+if a file inside a folder you have it you can delete any file in not yours  
+
+
+umask    // show the default permission // 666 for any file 777 for any directory 
+umask // by default umask set 022 minus write // how umask work 666 - 022 // 777 - 022
+umask 033 // set the umask to 033
+chmod u+xw,g-x file   // a stand for user and group and other
+chmod 644 file
+chmod 755 folder
+folder need x to get enter because it s an exutable file that containt a list of inode to its content
+
+
+chown user file  // chown root:root file   -R recursice option
+chgrp group file
+
+
+// set w to file with setfacl doesn t mean you can delete the file
+
+setfacl -m u:user:rwx /path/to/file   // modfy or add 
+
+setfacl -m g:group:rw /path/to/file    // modfy or add 
+
+setfacl -Rm "entry" /path/to/dir    // modfy or add to a folder
+
+setfacl -x u:user /path/to/file // for remove a specific user or group
+
+setfacl -b /path/to/file  // for remove every thing 
+
+getfacl 

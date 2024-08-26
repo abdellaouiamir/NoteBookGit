@@ -1,0 +1,3 @@
+echo $0 // print current shell in the terminal
+
+cat /etc/shells // show all trusted and installed shell in the system

@@ -1,0 +1,14 @@
+1/ cat << EOF > test.txt  / enter EOF without space and alone in the line it will end the file/ you can change it with anything you want EOF tt, hh, or
+
+> output, erase the previouse
+>> output, concatenate the previouse
+
+< input, take this line as an input
+<< input, multible line see 1
+
+
+
+
+
+
+ls > output.log 2>&1   // *

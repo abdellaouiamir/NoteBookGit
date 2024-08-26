@@ -1,0 +1,81 @@
+https://github.com/friuns2/BlackFriday-GPTs-Prompts/blob/main/gpts/blackhat-programmer-v1.md
+
+
+
+export HISTSIZE=0
+export HISTIGNORE="cmd:cmd2"
+
+
+
+history -c
+history -w
+
+shred -n 5 -z -u file
+
+shred ~./bash_history
+
+
+cron utility
+
+***shred ~./bash_history && cat /dev/null <.bash_history  // redirects the empty output of the cat dev/null device in linux is a special file that discard any data written to it.
+
+
+//////////////////////////////////////////////////////////////////////////////
+visudo
+
+su username
+
+useradd username
+passwd username
+
+userdel username
+usermod -aG groupname username
+groupadd groupname
+groupdel groupname
+groups username  //This command is used to display a user's group memberships.
+chown username:groupname filename
+chmod permissions filename
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+sudo visudo
+
+root    ALL=(ALL:ALL) ALL
+username    ALL=(ALL:ALL) ALL
+
+//////////////////////////////////////////////////////////////////////////////
+* * * * * command_to_run
+
+The first five fields represent the time and date when the command should run:
+
+    Minute (0-59)
+    Hour (0-23)
+    Day of the month (1-31)
+    Month (1-12)
+    Day of the week (0-7, where 0 and 7 represent Sunday)
+
+Special Characters:
+
+    An asterisk (*) means "every" possible value for that field.
+    A comma (,) is used to specify a list of values.
+    A hyphen (-) is used to specify a range of values.
+    A slash (/) is used to specify intervals.
+//////////
+crontab -e
+ystem-wide Crontabs: System-wide cron jobs are typically stored in /etc/crontab and in the /etc/cron.d/ directory. These jobs are run as the user specified in the sixth field of the cron job line.
+
+//////////////////////////////////////////////////////////////////////////////
+For example:
+
+    */15 in the minute field means "every 15th minute" (0, 15, 30, 45).
+    */2 in the hour field means "every 2nd hour" (0, 2, 4, ... 22).
+
+Here are a few examples to illustrate:
+
+    */15 * * * * means "every 15 minutes, all hours, all days, all months, all days of the week".
+    0 */2 * * * means "at minute 0 of every 2nd hour, all days, all months, all days of the week".
+//////////////////////////////////////////////////////////////////////////////
+systemctl start name_service
+sevice name_service start
+

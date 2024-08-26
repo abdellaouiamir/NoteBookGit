@@ -1,0 +1,173 @@
+run remoter script
+scp and the ssh to run it
+cat | ssh
+wget, curl from the a web server and then run it
+////////////
+nslookup
+xargs 
+ncpu
+du -h /var/log 2>/dev/null | sort -k1hr   // h in sort to store the size of the file corectly
+
+ls -lh /var/log | sort -k5 -hr | awk '{print $5,"---> " $NF}'
+ls -lh /var/log | awk '{print $5,"---> " $NF}' | sort -rh
+
+
+grep |fgrep  | egrep | pgrep | pkill
+
+sed
+wc
+cut
+awk
+sort 
+uniq
+diff
+cmp
+
+
+
+cut
+// per caractere
+cut -c1,3 filename
+cut -c1-2,3-5 filename
+// per byte
+cut -b1,3 filename
+cut -b1-2,3-5 filename
+//delimetry // separator
+
+cut -d: -f1,6 filename
+
+awk
+// 
+  awk --version
+  awk '{print $1}' sein.txt 
+  awk '{print $2}' sein.txt 
+  ls -l | awk '{print $1 $3}'
+  ls -l | awk '{print $1}'
+  ls -l | awk '{print $NF}'
+  awk '/Jerry/ {print}' sein.txt 
+ awk '// {print}' sein.txt 
+  awk '/J/ {print}' sein.txt 
+  awk -F: '{print $1}' /etc/passwd
+  echo "Hello Tom" | awk '{$2="Adam"; print $0}'
+  cat sein.txt | awk '{$NF=amir; print($0)}'
+ cat sein.txt | awk '{$NF=amir; print()}'
+  awk '{print($1)}' sein.txt 
+  awk '{print($0)}' sein.txt 
+  awk '{print($2)}' sein.txt 
+  cat sein.txt | awk '{$2="AMIR"; print $0}'
+  cat sein.txt | awk '{$NF="AMIR"; print ($0)}'
+
+  awk 'length ($0) > 15' sein.txt 
+ cat sein.txt | awk '{if ($2 == "Leo") print $0}'
+  cat sein.txt | awk '{if ($2 == "Leo") print $0;}'
+  cat sein.txt | awk '{print $NF;}'
+  cat sein.txt | awk '{print NF;}'
+
+///////////////////////////
+
+sed -n 3p sein.txt    ==   awk 'NR == 3 {print $0}' sein.txt ==  awk 'NR == 3 {print}' sein.txt == 
+
+
+
+////////////////////////// sed  / replace string in file / find and delete a line / find and diplay a line/ find and a(append ) or i (insert) string  // 
+
+sed s/mysql/MYSQL/g file.cngh
+sed 3,5d file.conf
+sed i/iejf
+
+sed 3i/thirdlinetest test.txt 
+this my fire
+ejif
+/thirdlinetest
+my feuif my
+erfjfmy  
+
+sed 3a/thirdlinetest test.txt 
+this my fire
+ejif
+my feuif my
+/thirdlinetest
+erfjfmy  
+
+sed /this/p test.txt            
+this my fire
+this my fire
+ejif
+my feuif my
+erfjfmy  
+
+cat test.txt 
+this my fire
+ejif
+my feuif my
+erfjfmy  
+
+  sed s/my/mo/2 test.txt > test2.txt
+  sed s/my/mo/g test.txt > test2.txt
+  sed s/my/mo/ test.txt > test2.txt
+  sed s/my/mo/2 test.txt > test2.txt
+  sed 2d test.txt > test2.txt
+  sed 2,3d test.txt > test2.txt
+  sed /this/d test.txt > test2.txt
+  sed /this/p test.txt > test2.txt
+  sed 2,3p test.txt 
+  sed 3i/thirdlinetest test.txt 
+  sed 3a/thirdlinetest test.txt 
+
+  sed -i 's/ /:/' sein.txt
+  sed -i 's/:/ /' sein.txt
+  
+  sed '/^$/d' sein.txt 
+  sed -n '12,18p' sein.txt  // you need to use n option with p or the output will be duplicated
+  sed '12,18d' sein.txt // see all the line except the 12 to 18 'list'
+  sed G sein.txt //
+  sed '8!s/word/wordreplace/' sein.txt // exclude the line number 8
+
+//////////////////// Grep // egrep
+  grep Benes sein.txt 
+  grep -c Benes sein.txt // count the number of line
+  grep -i benes sein.txt // it don t give fuck about the big and small letters
+  grep -n Benes sein.txt // display also the number of the line
+  grep -v Benes sein.txt // give the reverse off the reverse , anythin that don t have Benes in the line
+  egrep "Jerry|Uncel" sein.txt  // grep with regular expression it s equal to `grep -E`
+  egrep -i "Jerry|uncel" sein.txt // egrep with no case sensitive
+
+
+  rm -rf `ls | grep -v file` // delete every thing exclude file
+
+///////////////////// sort 
+
+ sort file.txt  // sort the file A to Z
+ sort -k2 file.txt // sort with the specif field / par default use spase you can use -t to chose the seperator see the example below
+ sort -k2 -t: file.txt  // see the exemple above
+ sort -r file.txt // revers the sort it was from A to Z it will be from Z to A
+-n // for numerical i didn t try yet
+
+
+/////////////////// uniq
+
+uniq file.txt            // read the help below
+sort file.txt | uniq    // just show the value once 
+sort file.txt | uniq -c // count how match get duplicate
+sort file.txt | uniq -d // show only the duplicate value
+
+
+////////////////////// wc 
+
+wc file.txt // show th number of line : the number of word: the number of byte
+wc -l file.txt // show  just the number of the lines
+wc -c file.txt // show just the number of bytes
+wc -w file.txt // show just the number of the word 
+wc dir// it s not allowed for directory it work but it will show 0  0  0 dirName
+ls -l | wc -l // how many file and dir inside the directory
+
+////////////////
+rm
+cp 
+mv
+touch
+mkdir
+rmdir
+
+
+head -n3 sein.txt | tail -n1

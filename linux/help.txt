@@ -1,0 +1,4 @@
+whatis
+--help
+-h
+man

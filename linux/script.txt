@@ -1,0 +1,121 @@
+
+cat /etc/passwd | cut -d: -f1,3,5-7 | wc -l  
+
+cat /etc/passwd | awk -F: '{print $1}'  
+//////////////////////////////////////
+printenv
+echo $TERM
+echo $0
+
+VARIABLE_LOCAL=value / local variable /zsh:bash
+
+export VARIABLE=value  // global /differen shell / bash /bash
+
+echo $VARIABLE  // for value
+
+
+
+
+alias cmd='cmd -o' /// custom command line
+
+
+//////////////////////////////////////////////////////////////////////
+
+
+#!/bin/bash
+
+user=$(whoami)
+
+hostname=$(hostname)
+
+directory=$(pwd)
+
+echo "the user is : $user \n the hostname is $hostname \n finaly pwd= $directory"
+echo "Content"
+ls
+
+//////////////////////////////////////////////////////////////////////
+
+#!/bin/bash
+# loop
+for i in 1 2 4; do 
+        echo Index=[$i]
+done
+echo print out a generated sequence
+for i in {1..5}; do
+        echo Index=[$i]
+done
+
+for ((i=1;i<=5;i++))
+do 
+        echo Index=[$i]
+done
+echo print out the last line of each shell script
+for FILE in *.sh
+do
+        echo ======================
+        echo File=[$FILE]
+        tail -n 1 $FILE
+done
+echo whil
+COUNT=5
+#$COUNT--
+#echo $COUNT
+while [[ $COUNT -gt 0 ]]; do
+        echo $COUNT
+        COUNT=$(($COUNT - 1))
+done
+
+///////////////////////////////////////////
+#!/bin/bash
+
+echo Name of the script [$0]
+
+echo Command line argument count [$#]
+
+for arg in $@; do
+        echo [$arg]
+done
+
+echo All the command as a string [$*]
+if [ "${10}" != "hiu"  ]; then 
+        echo Argument 3 is [${10}]
+        echo Argument 3 is not [$10]
+fi
+# {$12} for one or more degit bash will just take the first diget $1
+
+//////////////////////////////////////
+
+#!/bin/bash
+
+password_word_count=$1
+separator=$2
+
+password=""
+
+#total_word_count=$(cat ../rocky.tst| awk '{print $1}')
+total_word_count=`wc -l ../wordlists.txt| awk '{print $1}'`
+
+for (( i=1; i<=$password_word_count; i++  ))
+do
+        #Generate a random number as an index into the word list
+        rand_num_hex=`openssl rand -hex 4`
+        rand_num_dec=$((16#$rand_num_hex))
+        
+        #use the random number as and index into the word list
+        word_index=$(($rand_num_dec % $total_word_count))
+        random_word=`awk -v idx="$word_index" '{if (NR==idx) print $1}' ../wordlists.txt`
+
+        #Capitalize the word
+        random_word_upper=`echo ${random_word^}`
+        
+        #Insert a separator if this isn't the first word in the password
+        if [[ ${#password} -gt 0 ]]; then 
+                password=$password$separator$random_word_upper
+        else
+                password=$random_word_upper
+        fi
+done
+
+echo $password
+

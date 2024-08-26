@@ -1,0 +1,9 @@
+mkdir -p // create the folder and his parent
+rmdir
+
+// -r for recursive
+
+cp -r  // copy and rename the copy
+rm -rf 
+
+mv  //move and rename

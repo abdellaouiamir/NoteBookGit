@@ -1,0 +1,83 @@
+systemctl daemon-reload // reload the fstab for the new mounting configuration
+systemctl restart network // to restart 
+////////////
+ip
+ifconfig
+iwconfig
+arp -a
+netstat -ano // netstat -tuln
+ss -tuln
+route
+traceroute
+ping
+
+
+// DNS
+nslookup
+dif
+
+//
+curl 
+wget
+
+////////////////////////////////////////////////
+ethtool ens44 // replace with the interface , it show inf about you NIC , network information
+
+///////////////////////////// download file from the inernet or get web page
+wget url
+curl -O url
+
+curl url // return the html of the url
+//////////////////////////////////////// NIC Bonding Procedure
+
+modprobe bounding
+modinfo bounding
+create /etc/sysconfig/network-scripts/ifcfg-bond0
+edit /etc/sysconfig/network-scripts/ethernet1
+edit /etc/sysconfig/network-scripts/ethernet2
+restart network = systemctl restart network
+
+//////////////////////	FTP
+server/
+install vsftp
+sudo vim /etc/vsftpd/vsftpd.conf
+anonymous_enable=NO
+ascii_upload_enable=YES
+ascii_download_enable=YES
+ftpd_banner=Welcome to blah FTP service.
+use_localtime=YES
+
+
+systemctl enable vsftp
+client/
+
+install ftp
+
+ftp 192.168.1.199
+username
+password
+bin
+hash // to show progress
+put file.txt
+bye
+
+
+///////////////////////////// SCP
+scp file.txt username@192.168.2.22:/home/username
+
+it s based on ssh protocol // sshd the deamon run in the server to accept ssh connection
+/////////////////////////// rsync
+
+rsync option source destination
+
+//// rsync a file  // local
+tar cvf backup.tar
+mkdir /tmp/backups
+rsync -zvh backup.tar /tmp/backups
+//// rsync a dirctory // local
+rsync -azvh /home/amir /tmp/backups
+
+/// rsync a file // remote
+rsync -avz backup.tar username@192.168.1.1:/tmp/backups
+/// rsync a dirctory // remote
+rsync -avzh username@102.199.1.22:/home/amir /tmp/backups

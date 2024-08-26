@@ -1,0 +1,30 @@
+ls -R Desktop/nef
+cp -R 
+mkdir -p
+touch abc{0..9}.txt
+rm abc[0-9].txt
+
+strace -e open pwd
+
+fdisk -l
+
+fdisk /dev/sda
+
+cfdisk
+
+lsblk
+
+mount
+
+direct link / symbolic link
+ls -al | grep ^d | wc -l   // hard link . currentr directory / .. parent directory
+
+ls -l /dev | grep -v ^c
+
+
+linux
+//ro quiet splash
+// rw init=/bin/bash
+
+
+BURG_CMDLINE_LINUX_DEFAULT="quiet splash init=/path/to/your/init"

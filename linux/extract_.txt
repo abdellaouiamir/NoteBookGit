@@ -1,0 +1,43 @@
+//////////////////////////rar
+
+tar cvf file.tar .
+tar xcf file.tar
+
+/////////////////////////zip  reduce the size ten time
+
+gzip file
+
+gunzip file.zip  ||  gzip -d file.zip
+
+////////////////////zip 
+
+zip 
+unzip
+
+
+/////////////////// truncate
+
+truncate -s 10 file // if the taill smaller than the file size, it will cut the file shred the file to make 10 byte // litteryly t9os file
+
+truncate -s 60 file /// if the taille bigger than the file size it will be fulled with empty caractere ^@  // it will not retrive the lost bytes
+
+
+///////////////////// diff 
+diff file1.txt file2.txt
+
+// used for test file
+
+////////////////////// cmp
+
+cmp file1 file2
+
+// used for byte file
+
+////////////////////////// cat
+
+
+cat childfilea childfileb childfilec childfiled > file.txt
+
+//////////////////////// split
+
+split -l 2 file.txt childfile 

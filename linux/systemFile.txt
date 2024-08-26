@@ -1,0 +1,15 @@
+/var/log/messages  // centos
+
+/var/log/syslog   // ubuntu
+
+
+
+/var/log/secure  // centos
+
+/var/log/auth.log // ubuntu
+
+
+
+/etc/passwd
+/etc/group
+/etc/shadow

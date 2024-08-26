@@ -1,0 +1,21 @@
+git init
+git branch -a
+git checkout -b 
+
+
+
+git branch <branch-name>: Creates a new branch.
+git checkout <branch-name>: Switches to an existing branch.
+git checkout -b <branch-name>: Creates and switches to a new branch in one step.
+git switch <branch-name>: Switches to an existing branch (newer command).
+git switch -c <branch-name>: Creates and switches to a new branch (newer command).
+
+
+
+git clone https://<your-username>:<your-token>@github.com/<your-username>/<repository-name>.git
+
+git clone https://<your-token>@<HOST>/<your-username>/<repository-name>.git
+
+host: github.com | gitlab.com
+
+git remote -v

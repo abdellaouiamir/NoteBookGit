@@ -1,0 +1,4 @@
+insmod: Used to insert a module into the kernel.
+rmmod: Used to remove a module from the kernel.
+lsmod: Lists all currently loaded modules.
+modprobe: Used to load a module along with its dependencies.

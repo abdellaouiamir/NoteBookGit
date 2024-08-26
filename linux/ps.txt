@@ -1,0 +1,80 @@
+
+ps ax | less -S
+ps -e | less -S
+ps aux | less -S
+ ps -ef | less -S
+
+ps -U root -u root u | less -S
+ps -eH | less -S
+pstree | less -S
+
+
+
+
+
+
+ps
+
+xeyes &
+
+xcloack &
+
+
++ priority
+- next
+
+
+jobs
+
+fg %n
+
+bg %n
+
+ctrl z suspend
+
+ctrl d end enter text
+
+ctrl c kill ps
+
+
+kill -SIGCONT pid
+kill -9 pid
+
+pkill xeyes
+
+pgrep xeyes
+
+ps aux
+ps -eU
+////////////////
+nohup process &  // keep the process run after i turn off the terminal per default close the terminal terminate all the excute process in the background and the forground
+/// example
+nohup process > /dev/null 2>&1 &
+
+nice // change the process priorty // -20 to 19 // the lowest the more priorty to run
+nice -n 5 process  // the lowest the number the more priorty it has
+renice -10 -p pid
+
+
+
+
+/////////////////////////////////////////
+
+ps  // display process that running in the current terminal
+ps -f // display more data
+ps -ef // display all the process that run in the system // the most used command by exprets 
+ps -fu username // display all the process that run with a specif user
+
+
+////////////////////////////////kill
+kill -l // list all signal you can use
+kill -1 // restart process
+kill -2 // ctrl + c
+kill -9 // force to kill
+kill -15 // the default of kill terminate the process polictely gracefuly
+
+
+killall
+pkill
+pgrep
+	

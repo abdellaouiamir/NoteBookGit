@@ -1,0 +1,2 @@
+localectl list-keymaps
+loadkeys fr-pc

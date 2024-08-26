@@ -1,0 +1,54 @@
+git init
+git add .
+git status 
+git commit -m "comment " 
+git log
+
+
+
+///////////////////
+git checkout -b namebranche // create branch and move to it
+git chekout // list all the branches local  | git branch
+git chekout -a // list all the branches local and remotly | git branch -a
+git checkout namebrench // the change the specified brench
+///////////////////////
+
+git push --set-upstream origin developper // when the branch is missing in the cloude
+git push // when the branch is existe in the cloud
+/////////////////////
+git merge namebranch // the name of the branch you want to joint their code with you and will create new node like commit
+
+main // git merge bigFix // you are main and merge the bugfix to your brench and its a type of commit it will create new node
+
+merge you invite them
+/////////////////////
+rebase the invte themselve
+git rebase namebranch // it like merge but the work of name branch it will be lineare not parellt in merge
+
+//// HEAD
+git checkout change where the head point // current location
+Head -> main -> C2
+git checkout C2
+Head -> C2
+/// so first when we move between branches we was just change the head where it point // current position or work that will hapen
+
+///////// hashes  // identify each commit we will repclce in the C2 // it s the real word
+
+git log
+/// parent are the parent of the Head
+Moving upwards one commit at a time with ^  // go to the parent of current head you can stack it ^^
+Moving upwards a number of times with ~<num> // go n parent of the current head
+
+///
+git branch -f main HEAD~3
+git branch -f main HEAD // it will take you where the head existe
+//  go FORWORD NOT backword
+git checkout C3
+git branch -f main head
+//
+git branch -f command
+
+//// undo changes 
+git reset // we use for local branches it go back from C2 to C1 like C2 it never existe
+git reset HEAD~1
+git revert // we used for remote branches it will commit C2' as revert for C2 it will contain the contenant of C1 // it work like this to commit C2' to others

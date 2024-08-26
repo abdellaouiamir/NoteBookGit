@@ -1,0 +1,45 @@
+
+!100
+!-1
+!!
+!cat
+!sudo
+
+^oldfile^newfile^  // change the oldfile passed to old cmd to the newfile
+
+
+ls // doesn t work with pipe and redirect it take its input just from the argument
+
+sollution
+
+ls `cat file_ls.txt`
+
+ls $(cat file_ls.txt) // most used and more features
+
+
+grep// 
+
+grep -v e file.txt  // v invert the search line doesn t containt v | -E more regular expression rules
+
+grep error -B 3 -A 2 /var/log/*.log  // line before 3 -B // line after 2 -A
+
+
+sort //
+default from a to z // 
+-n for number
+-r reverse
+
+uniq//
+remvove dplicate // but need to word \n word
+use sort and then uniq for better result  // sort file.txt | uniq
+
+
+wc//
+wc -l // count line
+grep bon file.txt | wc -l
+
+
+
+
+
+grep -v e file.txt | sort | uniq | wc -l

@@ -1,0 +1,7 @@
+https://github.com/s0md3v/roop
+https://github.com/3rfaan/arch-everforest/tree/main
+https://github.com/prasanthrangan/hyprdots
+https://github.com/JaKooLit
+https://github.com/soldoestech/hyprland
+https://gitlab.com/stephan-raabe/dotfiles
+https://medium.com/@me.abdomansour/10-python-libraries-for-hacking-and-networking-e208346d3684#:~:text=The%20Scapy%20library%20is%20one,the%20network%20and%20its%20devices.

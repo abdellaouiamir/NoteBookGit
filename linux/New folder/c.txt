@@ -1,0 +1,15 @@
+sudo make clean install
+sudo make install
+sudo make uninstall
+
+sudo patch -i file.deff
+sudo patch -R file.deff // sudo patch -i file.deff  / y
+
+
+
+which
+/usr/local/bin/
+
+/usr/share/doc/
+
+~/.local/share/qtile/qtile.log

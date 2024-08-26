@@ -1,0 +1,82 @@
+
+    7  cat /etc/passwd | grep root
+    8  sudo chsh -s /bin/zsh
+   11  man chsh
+   12  sudo chsh /bin/zsh
+   16  zsh
+   17  exit
+   18  clear
+   19  sudo pacman -Syu
+   23  sudo pacman -Qe
+   24  sudo pacman -Qe | grep alec
+   27  pacman -Rns alacritty
+   28  sudo pacman -Rns alacritty
+   30  cat /etc/locale.gen
+   31  vim /etc/locale.gen
+   32  sudo vim /etc/locale.gen
+   33  sudo locale-gen
+   34  sudo vim /etc/locale.conf
+   35  echo $LANG
+   39  pgrep rofi
+   41  killall rofi
+   42  pgrep rofi
+   43  pkill rofi
+   44  sudo killall rofi
+   45  sudo pkill rofi
+   46  pgrep rofi
+   49  echo $0
+   51  cat /etc/mkinitcpio.conf
+   52  cat /etc/crypttab
+   53  sudo cat /etc/crypttab
+   54  cat /etc/mkinitcpio.conf
+   55  cat /etc/mkinitcpio.conf | grep ar
+   56  cat /etc/mkinitcpio.conf | grep -v #
+   57  cat /etc/mkinitcpio.conf | grep -vE "#*"
+   59  sudo cat /etc/crypttab
+   60  sudo vim /etc/crypttab
+   61  uname -a
+   62  whatis setxkbmap
+   63  man setxkbmap
+   64  dumpkeys
+   65  localectl status
+   67  cat /etc/locale.conf
+   68  sudo vim /etc/locale.conf
+   69  localectl status
+   70  cat /etc/crypttab
+   71  sudo cat /etc/crypttab
+   75  history 
+   76  sudo cat /etc/crypttab
+   77  sudo vim /etc/crypttab
+   78  sudo cat /etc/crypttab
+   80  localectl status
+   81  cat /etc/locale.conf
+   82  sudo vim /etc/locale.conf
+   83  localectl status
+   84  pacman -Qe | grep git
+   85  pacman -Qe | grep rofi
+   86  clear
+   87  su -
+   88  ls -a
+   89  ls .config
+   92  su -
+  101  clear
+  102  cat /etc/pacman.conf
+  104  lsblk
+  105  fdisk -l
+  106  sudo fdisk -l
+  109* mount
+  110* mount | grep nvme0n1p
+  111* clear
+  112* ls /dev | grep nvme
+  113* ls /dev | grep nvme0n1
+  114* ls /dev | grep nvme0n1p4
+  115* mount /dev/nvme0n1p4 /m
+  116  clear
+  117  ls /
+  118* mkdir /mnt/windows && mount /dev/nvme0n1p4 /mnt/windows
+  119* sudo mkdir /mnt/windows && sudo mount /dev/nvme0n1p4 /mnt/windows
+  120  free -h
+  121* sudo pacman -S ntfs-3g
+  124* sudo mount /dev/nvme0n1p4 /mnt/windows
+  136  cd /mnt/windows/Users/abdel/Music/
+setxkbmap us

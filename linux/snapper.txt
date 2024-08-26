@@ -1,0 +1,57 @@
+btrfs subvolume create /@
+btrfs subvolume create /@home
+btrfs subvolume create /@snapshots
+btrfs subvolume list /
+mount /dev/sbx -o subvolid=256 /
+mount /dev/sbx -o subvolid=257 /home
+btrfs subvolume delete /path/folder 
+btrfs subvolume snapshot /pathtosubvolume/subvolume /pathtosanpchot/namesnap
+
+vim /etc/fstab
+
+pacman -S snapper
+pacman -S snap-pac
+pacman -S grub-btrfs
+
+sudo *// all comand run sudo
+unmount /.snapshots
+snapper -c root create-config /
+snapper btrfs subvolume delete /.snapshots
+mkdir /.snapshots
+mount -a
+
+btrfs subvolume get-default /
+btrfs subvolume set-default 256 /
+btrfs subvolume get-default /
+
+sudo systemctl enable --now grub-btrfsd.service
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo systemctl enable --now snapper-cleanup.timer
+sudo systemctl enable --now snapper-boot.timer
+
+
+cachyos-x8664
+
+
+
+
+
+systemctl daemon-reload  // reload fstab to use the new version not the old one
+
+
+
+
+
+
+
+
+btrfs subvolume delete -i266 /
+
+
+sudo mount /dev/mapper/luks-fiefjfjeififj -o subvolid=5 /mnt
+sudo btrfs subvolume create @snapshots
+
+-- snapper rollback configure
+sudo mount /dev/sdx -o subvolid=5 /.btrfsroot
+change the /etc/snapper-rollback/conf to above

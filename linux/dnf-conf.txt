@@ -1,0 +1,19 @@
+/etc/dnf/dnf.conf
+
+#Added for Speed:
+
+fastestmirror=True
+max_parallel_downloads=10
+defaultyes=True
+keepcache=True
+
+
+
+
+// cmd
+sudo dnf clean cache
+dnf clean all
+//
+dnf update
+
+////////////////////////////

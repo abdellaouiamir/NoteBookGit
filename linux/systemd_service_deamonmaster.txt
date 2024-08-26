@@ -1,0 +1,34 @@
+systemctl start servicename.service
+systemctl stop servicename.service
+systemctl status servicename.service
+
+systemctl restart servicename.service
+systemctl reload servicename.service
+
+systemctl list-units --all
+
+
+
+#Add third party command to be managed by systemd
+/etc/systemd/system/servicename.service
+
+
+systemctl poweroff
+systemctl halt
+systemctl reboot
+
+
+systemctl try-restart service.service
+systemctl reload-or-restart service.service
+systemctl try-reload-or-restart service.service
+
+
+systemctl enable service.service
+systemctl reenable service.service
+systemctl disable service.service
+
+
+
+systemctl is-avtive service.service
+systemctl is-enabled service.service
+

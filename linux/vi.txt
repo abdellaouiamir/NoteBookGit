@@ -1,0 +1,29 @@
+:%s/Jerry/Peter/  
+save the file 
+shift zz // in command mode
+:wq  // in command mode
+
+num comand // repeat the command num iteration  // 30i-  //
+u  // in command mode ; undo ; go back
+
+r  // in command mode ; replace the current caractere
+
+x  // in command mode ; delete the current caractere
+
+dd   // in command mode; delete the line
+
+o // create new line and put you in the insert mode
+
+i // in comand mode ; start insert in the current index like insert
+
+a // in comand mode; start inset in the next index like append
+
+/word // in command ; use it for search the word
+
+
+
+b // begining of the word
+e // end of the word
+w // next word
+
+f// for find // 3fq // third occurence of q

@@ -1,0 +1,13 @@
+There are several techniques that individuals might use to attempt to hide their traces when using Nmap or similar tools, but it's important to emphasize that using these tools for unauthorized purposes is illegal and unethical. However, understanding these techniques can also be valuable for defenders to be aware of potential tactics used by attackers. Here are some methods attackers might employ:
+
+    Spoofing: Attackers might spoof their IP address to make it appear as if the scans are coming from a different source, potentially making it harder to trace the activity back to them. However, sophisticated network monitoring systems can often detect and filter out spoofed traffic.
+
+    Tor or VPN: Attackers might route their scans through Tor or a virtual private network (VPN) to obfuscate their true IP address and location. While this can provide some anonymity, it's not foolproof, as authorities might still be able to trace activity back through the Tor network or VPN provider.
+
+    Slow Scans: By conducting scans slowly and with long intervals between probes, attackers might attempt to evade detection by intrusion detection systems (IDS) and other security monitoring tools that are configured to detect rapid, aggressive scanning activity.
+
+    Fragmentation: Attackers might use fragmentation techniques to split packets into smaller fragments, potentially bypassing certain firewall and intrusion detection configurations that are only inspecting complete packets.
+
+    Idle Scanning: Idle scanning, also known as zombie scanning, involves using a third-party host as a proxy for scanning, making it appear as if the scans are originating from that host rather than the attacker's actual IP address.
+
+However, it's important to reiterate that attempting to hide one's tracks while engaging in unauthorized scanning or other malicious activities is illegal and unethical. Cybersecurity professionals and researchers should always operate within the bounds of the law and ethical guidelines, obtaining proper authorization before conducting any security assessments or tests.

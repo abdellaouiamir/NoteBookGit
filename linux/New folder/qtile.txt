@@ -1,0 +1,21 @@
+https://github.com/ahmad-shaban/qtile
+
+https://github.com/blackgolyb/.dotfiles/tree/main
+
+
+https://github.com/hsanirudh/Qtile_config
+
+
+https://github.com/tuffgniuz/qtile/tree/master
+
+
+
+ranger file manager
+
+rofi
+
+Scratchpad music play
+
+neovim
+
+https://qtile.org/screenshots/
