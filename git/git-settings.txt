@@ -1,0 +1,6 @@
+git config --global --list // list all the global settings you can change global to local or system
+local scope in the specific repository where the command run 
+global applied for all the repository of the current user
+system applied for all the user in the system
+// schema
+git config --global <key> <value>

@@ -1,0 +1,5 @@
+git remote -v
+git push // push, send the new commits to the remote repository
+git pull // get the new commits from the remote repository
+git pull replace the use of git fetch and git merge origin/branch-name
+git push -u origin master // -u to specify the branch you want to push , per default git use the current branch, it work aalso for pull

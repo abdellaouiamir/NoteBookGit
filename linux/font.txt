@@ -1,0 +1,4 @@
+fc-cache -fv
+fc-list
+fonts are saved in /usr/share/fonts
+and they \' extention is .ttf
